@@ -12,7 +12,7 @@ namespace FlowMeterLibr.Structs
 
         public FlowConfigStruct(byte pipeDiametr, float c0, float angle, float nullThresold, byte nbrValuesForAvg,
             byte nbrValuesForCalibrates,
-            byte schemeSelect, float sensorDistance, float calibrateValue, float koeff1, float nu, string withoutParse)
+            byte schemeSelect, float sensorDistance, float calibrateValue, float koeff1, float nu)
         {
             PipeDiametr = pipeDiametr;
             C0 = c0;
@@ -31,14 +31,10 @@ namespace FlowMeterLibr.Structs
         public FlowConfigStruct(byte[] data)
         {
             //TODO: write all data into struct
-            var str = "";
-            var builder = new StringBuilder();
-            foreach (var b in data)
-            {
-                builder.Append(b + " ");
-            }
-            Debug.WriteLine("[Config data]: " + builder);
+            
         }
+
+
 
         public byte PipeDiametr { get; set; }
 
@@ -61,6 +57,8 @@ namespace FlowMeterLibr.Structs
         public float Koeff1 { get; set; }
 
         public float Nu { get; set; }
+
+
 
         public override string ToString()
         {

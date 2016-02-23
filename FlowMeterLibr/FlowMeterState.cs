@@ -34,9 +34,12 @@ namespace FlowMeterLibr
             Valid = false;
         }
 
+
         public FlowDateStruct DateTime { get; }
 
         public FlowConfigStruct Config { get; }
+
+
 
 
         public bool Valid { get; }

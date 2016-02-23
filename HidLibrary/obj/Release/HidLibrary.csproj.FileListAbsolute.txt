@@ -2,3 +2,8 @@ C:\Users\User\Documents\FlowMeter\HidLibrary\bin\Release\HidLibrary.dll
 C:\Users\User\Documents\FlowMeter\HidLibrary\bin\Release\HidLibrary.pdb
 C:\Users\User\Documents\FlowMeter\HidLibrary\obj\Release\HidLibrary.dll
 C:\Users\User\Documents\FlowMeter\HidLibrary\obj\Release\HidLibrary.pdb
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\bin\Release\HidLibrary.dll
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\bin\Release\HidLibrary.pdb
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\obj\Release\HidLibrary.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\obj\Release\HidLibrary.dll
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\obj\Release\HidLibrary.pdb

@@ -10,3 +10,18 @@ C:\Users\winst\Desktop\FlowMeter\FlowMeterConnect\obj\Release\FlowMeterConnect.p
 C:\Users\winst\Desktop\Flow Meter\FlowMeterConnect\bin\Release\FlowMeterConnect.exe.config
 C:\Users\winst\Desktop\Flow Meter\FlowMeterConnect\obj\Release\FlowMeterConnect.exe
 C:\Users\winst\Desktop\Flow Meter\FlowMeterConnect\obj\Release\FlowMeterConnect.pdb
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\bin\Release\FlowMeterConnect.exe.config
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\obj\Release\FlowMeterConnect.exe
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\obj\Release\FlowMeterConnect.pdb
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\bin\Release\FlowMeterConnect.exe
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\bin\Release\FlowMeterConnect.pdb
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\bin\Release\FlowMeterLibr.dll
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\bin\Release\log4net.dll
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\bin\Release\HidLibrary.dll
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\bin\Release\FlowMeterLibr.pdb
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\bin\Release\log4net.xml
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\bin\Release\HidLibrary.pdb
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\obj\Release\FlowMeterConnect.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\obj\Release\FlowMeterConnect.MainForm.resources
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\obj\Release\FlowMeterConnect.Properties.Resources.resources
+C:\Users\User\Source\Repos\Flow-meter\FlowMeterConnect\obj\Release\FlowMeterConnect.csproj.GenerateResource.Cache

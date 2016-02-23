@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\FlowMeterErrorCodes.cs" />
+    <Compile Include="Enums\FlowUITabs.cs" />
     <Compile Include="Exceptions\FlowMeterException.cs" />
     <Compile Include="FlowMeterEventArgs.cs" />
     <Compile Include="FlowMeterManager.cs" />

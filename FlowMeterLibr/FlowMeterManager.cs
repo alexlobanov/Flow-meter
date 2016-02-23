@@ -21,9 +21,10 @@ namespace FlowMeterLibr
         private bool connectedToDriver;
         private readonly bool debugPrintRawMessages = false;
 
-        private HidDevice device;
+        public HidDevice device;
         private bool disposed;
 
+        
 
         /// <summary>
         ///     Closes the connection to the device.

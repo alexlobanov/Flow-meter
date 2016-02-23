@@ -2,6 +2,9 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using FlowMeterLibr;
+using FlowMeterLibr.Enums;
+using FlowMeterLibr.Sending;
+using FlowMeterLibr.TO;
 using log4net;
 
 namespace FlowMeterConnect
@@ -11,6 +14,9 @@ namespace FlowMeterConnect
         private static readonly ILog Log = Program.log;
         private static readonly FlowMeterManager _flowMeterManager = new FlowMeterManager();
         private bool _connect;
+
+        private FlowUITabs _currentTab;
+
 
         public MainForm()
         {
@@ -26,7 +32,10 @@ namespace FlowMeterConnect
 
         private void TimerUpdateOnTick(object sender, EventArgs eventArgs)
         {
-            throw new NotImplementedException();
+            if (_currentTab == FlowUITabs.DefaultTab)
+            {
+                SendData.SendDataToDevice(FlowCommands.MainCfg, ref _flowMeterManager.device);
+            }
         }
 
         private void TimerConnectOnTick(object sender, EventArgs eventArgs)
@@ -34,7 +43,7 @@ namespace FlowMeterConnect
             _connect = ConnectToDevice();
             if (!_connect) return;
             Log.Debug("Device conneted from timer");
-            timerConnect.Start();
+            timerUpdate.Start();
             timerConnect.Stop();
         }
 
@@ -47,7 +56,8 @@ namespace FlowMeterConnect
                 _flowMeterManager.DeviceRemoved += FlowMeterManagerOnDeviceRemoved;
                 _flowMeterManager.TimeChange += FlowMeterManagerOnTimeChange;
                 _flowMeterManager.ConfigGet += FlowMeterManagerOnConfigGet;
-                Debug.WriteLine("FlowMate found, press any key to exit.");
+                Log.Debug("[FlowMate] found");
+                Debug.WriteLine("FlowMate found");
                 return true;
             }
             Debug.WriteLine("Could not find a FlowMate.");
@@ -56,22 +66,39 @@ namespace FlowMeterConnect
 
         private void FlowMeterManagerOnConfigGet(object sender, FlowMeterEventArgs flowMeterEventArgs)
         {
-            throw new NotImplementedException();
+            Debug.WriteLine("[GET] Config");
+            Log.Debug("[GET] Config");
         }
 
         private void FlowMeterManagerOnTimeChange(object sender, FlowMeterEventArgs flowMeterEventArgs)
         {
-            throw new NotImplementedException();
+            Debug.WriteLine("[GET] Time");
+            Log.Debug("[GET] Time");
         }
 
         private void FlowMeterManagerOnDeviceRemoved(object sender, EventArgs eventArgs)
         {
-            throw new NotImplementedException();
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action<object, EventArgs>(FlowMeterManagerOnDeviceRemoved), sender, eventArgs);
+                return;
+            }
+            _connect = false;
+            Log.Debug("Device disconect");
+            Debug.WriteLine("FlowMeter removed.");
         }
 
         private void FlowMeterManagerOnDeviceAttached(object sender, EventArgs eventArgs)
         {
-            throw new NotImplementedException();
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action<object, EventArgs>(FlowMeterManagerOnDeviceAttached), sender, eventArgs);
+                return;
+            }
+            _connect = true;
+            //  label2.Text = "Connected";
+            Log.Debug("Device attached");
+            Debug.WriteLine("FlowMeter attached.");
         }
 
 
@@ -297,6 +324,22 @@ namespace FlowMeterConnect
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             adjustComboBox2();
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            switch (e.TabPageIndex)
+            {
+                case 0:
+                    _currentTab = FlowUITabs.DefaultTab;
+                    break;
+                case 1:
+                    _currentTab = FlowUITabs.SettingTab;
+                    break;
+                case 2:
+                    _currentTab = FlowUITabs.ServiceTab;
+                    break;
+            }
         }
     }
 }

@@ -63,7 +63,8 @@ namespace FlowMeterLibr.Сommunication
                     return new FlowMeterState();
 
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    Debug.WriteLine("[Get] not found command : " + data[0]);
+                    return new FlowMeterState();
             }
         }
     }

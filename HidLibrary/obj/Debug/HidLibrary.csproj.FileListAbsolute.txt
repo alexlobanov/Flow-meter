@@ -22,3 +22,8 @@ C:\Users\winst\Desktop\FlowMeter\HidLibrary\bin\Debug\HidLibrary.pdb
 C:\Users\winst\Desktop\FlowMeter\HidLibrary\obj\Debug\HidLibrary.csprojResolveAssemblyReference.cache
 C:\Users\winst\Desktop\FlowMeter\HidLibrary\obj\Debug\HidLibrary.dll
 C:\Users\winst\Desktop\FlowMeter\HidLibrary\obj\Debug\HidLibrary.pdb
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\bin\Debug\HidLibrary.dll
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\bin\Debug\HidLibrary.pdb
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\obj\Debug\HidLibrary.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\obj\Debug\HidLibrary.dll
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\obj\Debug\HidLibrary.pdb
