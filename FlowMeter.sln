@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowMeterLibr", "FlowMeterLibr\FlowMeterLibr.csproj", "{77B020BA-8508-435E-ADB8-3B649B93F0CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidLibrary", "HidLibrary\HidLibrary.csproj", "{9E8F1D50-74EA-4C60-BD5C-AB2C5B53BC66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowMeter", "FlowMeter\FlowMeter.csproj", "{28DF2485-A0F6-4816-9D40-927AE783D782}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowMeterConnect", "FlowMeterConnect\FlowMeterConnect.csproj", "{69490681-2AF7-4477-9D2A-8AB672A449F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77B020BA-8508-435E-ADB8-3B649B93F0CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B020BA-8508-435E-ADB8-3B649B93F0CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B020BA-8508-435E-ADB8-3B649B93F0CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B020BA-8508-435E-ADB8-3B649B93F0CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E8F1D50-74EA-4C60-BD5C-AB2C5B53BC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E8F1D50-74EA-4C60-BD5C-AB2C5B53BC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E8F1D50-74EA-4C60-BD5C-AB2C5B53BC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E8F1D50-74EA-4C60-BD5C-AB2C5B53BC66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28DF2485-A0F6-4816-9D40-927AE783D782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28DF2485-A0F6-4816-9D40-927AE783D782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28DF2485-A0F6-4816-9D40-927AE783D782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28DF2485-A0F6-4816-9D40-927AE783D782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69490681-2AF7-4477-9D2A-8AB672A449F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69490681-2AF7-4477-9D2A-8AB672A449F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69490681-2AF7-4477-9D2A-8AB672A449F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69490681-2AF7-4477-9D2A-8AB672A449F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
