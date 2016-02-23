@@ -1,4 +1,0 @@
-C:\Users\User\Documents\FlowMeter\HidLibrary\bin\Release\HidLibrary.dll
-C:\Users\User\Documents\FlowMeter\HidLibrary\bin\Release\HidLibrary.pdb
-C:\Users\User\Documents\FlowMeter\HidLibrary\obj\Release\HidLibrary.dll
-C:\Users\User\Documents\FlowMeter\HidLibrary\obj\Release\HidLibrary.pdb

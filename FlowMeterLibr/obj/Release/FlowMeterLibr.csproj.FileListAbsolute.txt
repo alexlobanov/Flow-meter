@@ -1,7 +1,0 @@
-C:\Users\User\Documents\FlowMeter\FlowMeterLibr\bin\Release\FlowMeterLibr.dll
-C:\Users\User\Documents\FlowMeter\FlowMeterLibr\bin\Release\FlowMeterLibr.pdb
-C:\Users\User\Documents\FlowMeter\FlowMeterLibr\bin\Release\HidLibrary.dll
-C:\Users\User\Documents\FlowMeter\FlowMeterLibr\bin\Release\HidLibrary.pdb
-C:\Users\User\Documents\FlowMeter\FlowMeterLibr\obj\Release\FlowMeterLibr.csprojResolveAssemblyReference.cache
-C:\Users\User\Documents\FlowMeter\FlowMeterLibr\obj\Release\FlowMeterLibr.dll
-C:\Users\User\Documents\FlowMeter\FlowMeterLibr\obj\Release\FlowMeterLibr.pdb
