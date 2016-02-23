@@ -50,6 +50,7 @@
     <Compile Include="Requests\ConfigRequest.cs" />
     <Compile Include="Requests\DateRequest.cs" />
     <Compile Include="Requests\abstract\Requets.cs" />
+    <Compile Include="Сommunication\ConverterData.cs" />
     <Compile Include="Сommunication\ResponseData.cs" />
     <Compile Include="Сommunication\SendData.cs" />
     <Compile Include="Structs\FlowConfigStruct.cs" />
