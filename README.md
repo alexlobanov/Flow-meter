@@ -1,2 +1,2 @@
 # Flow-meter
-Programm for usb device
+Program for usb device
