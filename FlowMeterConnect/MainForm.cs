@@ -1,16 +1,28 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Text;
 using System.Windows.Forms;
 using FlowMeterLibr;
+using FlowMeterLibr.Enums;
+using FlowMeterLibr.Events;
+using FlowMeterLibr.Structs;
+using FlowMeterLibr.Сommunication;
+using FlowMeterLibr.TO;
+using HidLibrary;
 using log4net;
 
 namespace FlowMeterConnect
 {
     public partial class MainForm : Form
     {
-        private static readonly ILog Log = Program.log;
-        private static readonly FlowMeterManager _flowMeterManager = new FlowMeterManager();
         private bool _connect;
+
+        private static readonly ILog Log = Program.log;
+        private static HidDevice _device;
+        private static readonly FlowMeterManager _flowMeterManager = new FlowMeterManager();
+        private FlowUITabs _currentTab;
+        private FlowUITabs _prevTab;
+        private FlowTypeWork _stateFlowWork;
 
         public MainForm()
         {
@@ -22,11 +34,32 @@ namespace FlowMeterConnect
 
             timerUpdate.Interval = 1000;
             timerUpdate.Tick += TimerUpdateOnTick;
+            _prevTab = FlowUITabs.None;
         }
 
         private void TimerUpdateOnTick(object sender, EventArgs eventArgs)
         {
-            throw new NotImplementedException();
+            switch (_currentTab)
+            {
+                case FlowUITabs.DefaultTab:
+                    if (_prevTab != _currentTab)
+                    {
+                        _device.SendDataToDevice(FlowCommands.DeviceInfo);
+                    }
+                    _device.SendDataToDevice(FlowCommands.RtcTime);
+                    break;
+                case FlowUITabs.SettingTab:
+                    if (_prevTab == FlowUITabs.DefaultTab)
+                        _device.SendDataToDevice(FlowCommands.DeviceInfoStop);
+                    break;
+                case FlowUITabs.ServiceTab:
+                    if (_prevTab == FlowUITabs.DefaultTab)
+                        _device.SendDataToDevice(FlowCommands.DeviceInfoStop);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            _prevTab = _currentTab;
         }
 
         private void TimerConnectOnTick(object sender, EventArgs eventArgs)
@@ -34,10 +67,93 @@ namespace FlowMeterConnect
             _connect = ConnectToDevice();
             if (!_connect) return;
             Log.Debug("Device conneted from timer");
-            timerConnect.Start();
+            timerUpdate.Start();
             timerConnect.Stop();
         }
 
+
+        private void InvokeCustomEvents()
+        { 
+            _flowMeterManager.TimeChange += FlowMeterManagerOnTimeChange;
+            _flowMeterManager.ConfigGet += FlowMeterManagerOnConfigGet;
+            _flowMeterManager.CommonInfoGet += FlowMeterManagerOnCommonInfoGet;
+            _flowMeterManager.TypeWork += FlowMeterManagerOnTypeWork;
+        }
+
+        private void FlowMeterManagerOnTypeWork(object sender, FlowMeterWorkStatusEventsArgs flowMeterWorkStatusEventsArgs)
+        {
+           // Debug.WriteLine("[GET] Type");
+            Log.Debug("[GET] Type");
+            _stateFlowWork = flowMeterWorkStatusEventsArgs.TypeWork;
+            var strToChangeType = flowMeterWorkStatusEventsArgs.TypeWork.GetDescription();    
+            if (InvokeRequired)
+            {
+                labelTypeOfWork.Invoke(new Action(() =>
+                {
+                    labelTypeOfWork.Text = strToChangeType;
+                }));
+            }
+            else
+            {
+                labelTypeOfWork.Text = strToChangeType;
+            }
+        }
+
+        private void FlowMeterManagerOnConfigGet(object sender, FlowMeterEventArgs flowMeterEventArgs)
+        {
+            //Debug.WriteLine("[GET] Config");
+            Log.Debug("[GET] Config");
+        }
+
+        private void FlowMeterManagerOnTimeChange(object sender, FlowMeterEventArgs flowMeterEventArgs)
+        {
+           // Debug.WriteLine("[GET] Time");
+            Log.Debug("[GET] Time");
+           if (InvokeRequired)
+           {
+                Invoke(new Action(() =>
+                {
+                    textBox7.Text = flowMeterEventArgs.State.DateTime.ConvertedDateTime.ToString();
+                }));
+            }
+           else
+           {
+                textBox7.Text = flowMeterEventArgs.State.DateTime.ConvertedDateTime.ToString();
+            }
+        }
+
+        private void FlowMeterManagerOnCommonInfoGet(object sender, FlowMeterEventArgs flowMeterEventArgs)
+        {
+            //Debug.WriteLine("[GET] Common");
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() =>
+                {
+                    var flowStruct = flowMeterEventArgs.State.DevInfo.FlowStruct;
+                    qCurrentTextBox.Text = flowStruct.QCurrent1.ToString();
+                    vModule1TextBox.Text = flowStruct.VModule1.ToString();
+                    vPlusTextBox.Text = flowStruct.VPlus1.ToString();
+                    vMinusTextBox.Text = flowStruct.VMinus1.ToString();
+                    teTimeTextBox.Text = flowStruct.TeTime1.ToString();
+                    tpTimeTextBox.Text = flowStruct.TpTime1.ToString();
+                    deviceCrcTextBox.Text = flowStruct.DeviceCrc1.IntTohHexString();
+                    deviceSerialTextBox.Text = flowStruct.DeviceSerial.ToString();
+                    firmwareNameTextBox.Text = flowStruct.FirmwareName;
+                }));
+            }
+            else
+            {
+                var flowStruct = flowMeterEventArgs.State.DevInfo.FlowStruct;
+                qCurrentTextBox.Text = flowStruct.QCurrent1.ToString();
+                vModule1TextBox.Text = flowStruct.VModule1.ToString();
+                vPlusTextBox.Text = flowStruct.VPlus1.ToString();
+                vMinusTextBox.Text = flowStruct.VMinus1.ToString();
+                teTimeTextBox.Text = flowStruct.TeTime1.ToString();
+                tpTimeTextBox.Text = flowStruct.TpTime1.ToString();
+                deviceCrcTextBox.Text = flowStruct.DeviceCrc1.IntTohHexString();
+                deviceSerialTextBox.Text = flowStruct.DeviceSerial.ToString();
+            }
+        }
 
         private bool ConnectToDevice()
         {
@@ -45,33 +161,41 @@ namespace FlowMeterConnect
             {
                 _flowMeterManager.DeviceAttached += FlowMeterManagerOnDeviceAttached;
                 _flowMeterManager.DeviceRemoved += FlowMeterManagerOnDeviceRemoved;
-                _flowMeterManager.TimeChange += FlowMeterManagerOnTimeChange;
-                _flowMeterManager.ConfigGet += FlowMeterManagerOnConfigGet;
-                Debug.WriteLine("FlowMate found, press any key to exit.");
+
+                InvokeCustomEvents();
+
+                Log.Debug("[FlowMate] found");
+                Debug.WriteLine("FlowMate found");
                 return true;
             }
             Debug.WriteLine("Could not find a FlowMate.");
             return false;
         }
 
-        private void FlowMeterManagerOnConfigGet(object sender, FlowMeterEventArgs flowMeterEventArgs)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void FlowMeterManagerOnTimeChange(object sender, FlowMeterEventArgs flowMeterEventArgs)
-        {
-            throw new NotImplementedException();
-        }
 
         private void FlowMeterManagerOnDeviceRemoved(object sender, EventArgs eventArgs)
         {
-            throw new NotImplementedException();
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action<object, EventArgs>(FlowMeterManagerOnDeviceRemoved), sender, eventArgs);
+                return;
+            }
+            _connect = false;
+            Log.Debug("Device disconect");
+            Debug.WriteLine("FlowMeter removed.");
         }
 
         private void FlowMeterManagerOnDeviceAttached(object sender, EventArgs eventArgs)
         {
-            throw new NotImplementedException();
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action<object, EventArgs>(FlowMeterManagerOnDeviceAttached), sender, eventArgs);
+                return;
+            }
+            _connect = true;
+            _device = _flowMeterManager.device;
+            Log.Debug("Device attached");
+            Debug.WriteLine("FlowMeter attached.");
         }
 
 
@@ -87,7 +211,7 @@ namespace FlowMeterConnect
 
             if (result == DialogResult.Yes)
             {
-                // Set device time.
+                _device.SendDataToDevice(FlowCommands.RtcTime, new FlowDateStruct(DateTime.Now));
             }
         }
 
@@ -181,8 +305,7 @@ namespace FlowMeterConnect
         private void button3_Click(object sender, EventArgs e)
         {
             // Initializes the variables to pass to the MessageBox.Show method.
-            var message =
-                "Калибровку необходимо запускать ТОЛЬКО при условии отсутствия течения жидкости через УПР.\n\nЗапустить сейчас?";
+            var message = "Калибровку необходимо запускать ТОЛЬКО при условии отсутствия течения жидкости через УПР.\n\nЗапустить сейчас?";
             var caption = "Калибровка измерительной части";
             var buttons = MessageBoxButtons.YesNo;
             DialogResult result;
@@ -297,6 +420,31 @@ namespace FlowMeterConnect
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             adjustComboBox2();
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            switch (e.TabPageIndex)
+            {
+                case 0:
+                    _currentTab = FlowUITabs.DefaultTab;
+                    break;
+                case 1:
+                    _currentTab = FlowUITabs.SettingTab;
+                    break;
+                case 2:
+                    _currentTab = FlowUITabs.ServiceTab;
+                    break;
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_currentTab == FlowUITabs.DefaultTab) //отписываемся от потоковой рассылки
+                _device.SendDataToDevice(FlowCommands.DeviceInfoStop);
+
+            if ((_device != null) && (_device.IsConnected))
+                _device.CloseDevice();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using FlowMeterLibr.Events;
 using FlowMeterLibr.Requests;
 using FlowMeterLibr.TO;
 using FlowMeterLibr.Сommunication;
@@ -14,16 +15,15 @@ namespace FlowMeterLibr
         private const int VendorId = 0x0483;
         private const int ProductId = 0x5711;
 
-
-        private const int MinimumLengthData = 3;
         private static readonly Stack<Requets> lastRequests = new Stack<Requets>();
         private bool attached;
         private bool connectedToDriver;
         private readonly bool debugPrintRawMessages = false;
 
-        private HidDevice device;
+        public HidDevice device;
         private bool disposed;
 
+        
 
         /// <summary>
         ///     Closes the connection to the device.
@@ -46,6 +46,8 @@ namespace FlowMeterLibr
 
         public event EventHandler<FlowMeterEventArgs> TimeChange;
         public event EventHandler<FlowMeterEventArgs> ConfigGet;
+        public event EventHandler<FlowMeterEventArgs> CommonInfoGet;
+        public event EventHandler<FlowMeterWorkStatusEventsArgs> TypeWork;
 
         /// <summary>
         ///     Attempts to connect to a PowerMate device.
@@ -81,7 +83,6 @@ namespace FlowMeterLibr
                 Debug.WriteLine("Exit method OnReport");
                 return;
             }
-            Debug.WriteLine("EnterMethod OnReport");
             if (report.Data.Length >= 3)
             {
                 var state = ResponseData.ParseState(report.Data);
@@ -119,47 +120,67 @@ namespace FlowMeterLibr
             device.ReadReport(OnReport);
         }
 
+        private FlowTypeWork prevState = FlowTypeWork.None;
+
         private void GenerateEvents(FlowMeterState state)
         {
+            if (prevState != state.TypeWork)
+            {
+                prevState = state.TypeWork;
+                OnChangedTypeForm(state.TypeWork);
+            }
             switch (state.UsingCommand)
             {
                 case FlowCommands.FactoryReset:
-                    Debug.WriteLine("FactoryReset event");
+                    //Debug.WriteLine("FactoryReset event");
                     break;
                 case FlowCommands.SaveAllSettings2memory:
-                    Debug.WriteLine("SaveAllSettings2memory event");
+                    //Debug.WriteLine("SaveAllSettings2memory event");
                     break;
                 case FlowCommands.DiveceError2Usb:
-                    Debug.WriteLine("DiveceError2Usb event");
+                   // Debug.WriteLine("DiveceError2Usb event");
                     break;
                 case FlowCommands.MainCfg:
                     OnGetConfig(state);
-                    Debug.WriteLine("MainCfg event");
+                    //Debug.WriteLine("MainCfg event");
                     break;
                 case FlowCommands.USmetrVariablesCmd:
                     break;
                 case FlowCommands.RtcTime:
-                    Debug.WriteLine("RtcTime event");
+                    //Debug.WriteLine("RtcTime event");
                     OnTimeChange(state);
                     break;
                 case FlowCommands.PulseCfg:
-                    Debug.WriteLine("PulseCfg event");
+                    //Debug.WriteLine("PulseCfg event");
                     break;
                 case FlowCommands.ModBusCfg:
-                    Debug.WriteLine("ModBusCfg event");
+                   // Debug.WriteLine("ModBusCfg event");
                     break;
                 case FlowCommands.DeviceInfo:
-                    Debug.WriteLine("DeviceInfo event");
+                    //Debug.WriteLine("DeviceInfo event");
+                    OnGetCommonInfo(state);
                     break;
                 case FlowCommands.FormatEEPROM:
-                    Debug.WriteLine("FormatEEPROM event");
+                   // Debug.WriteLine("FormatEEPROM event");
                     break;
                 case FlowCommands.RunCalibrate:
-                    Debug.WriteLine("RunCalibrate event");
+                   // Debug.WriteLine("RunCalibrate event");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        private void OnChangedTypeForm(FlowTypeWork state)
+        {
+            var handle = TypeWork;
+            handle?.Invoke(this, new FlowMeterWorkStatusEventsArgs(state));
+        }
+
+        private void OnGetCommonInfo(FlowMeterState state)
+        {
+            var handle = CommonInfoGet;
+            handle?.Invoke(this, new FlowMeterEventArgs(state));
         }
 
         private void OnGetConfig(FlowMeterState state)

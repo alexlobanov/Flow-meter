@@ -1,41 +1,55 @@
-﻿namespace FlowMeterLibr.Structs
+﻿using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using FlowMeterLibr.Сommunication;
+
+namespace FlowMeterLibr.Structs
 {
+     
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Size =  54), Serializable]
+    public struct DevInfoStruct
+    {
+
+        public float QCurrent1; //4
+
+        public double VModule1;//8
+
+        public double VPlus1;//8
+
+        public double VMinus1;//8
+
+        public UInt32 TpTime1;//4
+
+        public UInt32 TeTime1; //4
+
+        public UInt32 DeviceCrc1; //4
+
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 11)]
+
+        public string FirmwareName; //17??
+
+        public UInt32 DeviceSerial; //4
+    }
+
     public class FlowCommonDevInfo
     {
-        public FlowCommonDevInfo(float qCurrent, double vModule, double vPlus, double vMinus, uint tpTime, uint teTime,
-            uint deviceCrc, string firmwareName, uint deviceSerial)
+        private DevInfoStruct _flowStruct;
+
+        public FlowCommonDevInfo(byte[] data)
         {
-            QCurrent1 = qCurrent;
-            VModule1 = vModule;
-            VPlus1 = vPlus;
-            VMinus1 = vMinus;
-            TpTime1 = tpTime;
-            TeTime1 = teTime;
-            DeviceCrc1 = deviceCrc;
-            FirmwareName = firmwareName;
-            DeviceSerial = deviceSerial;
+            _flowStruct = data.ToStruct<DevInfoStruct>();
         }
 
-        public FlowCommonDevInfo()
+        public FlowCommonDevInfo(DevInfoStruct flowStruct)
         {
+            _flowStruct = flowStruct;
         }
 
-        public float QCurrent1 { get; set; }
+        public DevInfoStruct FlowStruct
+        {
+            get { return _flowStruct; }
+        }
 
-        public double VModule1 { get; set; }
 
-        public double VPlus1 { get; set; }
-
-        public double VMinus1 { get; set; }
-
-        public uint TpTime1 { get; set; }
-
-        public uint TeTime1 { get; set; }
-
-        public uint DeviceCrc1 { get; set; }
-
-        public string FirmwareName { get; set; }
-
-        public uint DeviceSerial { get; set; }
     }
 }

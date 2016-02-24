@@ -11,6 +11,7 @@
         PulseCfg = 13,
         ModBusCfg = 15,
         DeviceInfo = 16,
+        DeviceInfoStop = -1,
         FormatEEPROM = 6,
         RunCalibrate = 7
     }

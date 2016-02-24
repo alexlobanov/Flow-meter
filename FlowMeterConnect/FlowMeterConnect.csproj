@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -87,6 +88,10 @@
     <ProjectReference Include="..\FlowMeterLibr\FlowMeterLibr.csproj">
       <Project>{77b020ba-8508-435e-adb8-3b649b93f0cf}</Project>
       <Name>FlowMeterLibr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HidLibrary\HidLibrary.csproj">
+      <Project>{9E8F1D50-74EA-4C60-BD5C-AB2C5B53BC66}</Project>
+      <Name>HidLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

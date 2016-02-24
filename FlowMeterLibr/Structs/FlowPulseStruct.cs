@@ -1,35 +1,36 @@
-﻿namespace FlowMeterLibr.Structs
+﻿using FlowMeterLibr.Сommunication;
+
+namespace FlowMeterLibr.Structs
 {
+    public struct PulseStruct
+    {
+        byte _pusleOutNbr;
+        byte _pulseOutMode;
+        byte _logicUnit;
+        byte _pulseOutEnable;
+        byte _pulseIsConfigured;
+        float _weightPulse;
+        ushort _maxFrequency;
+        ushort _pulseDescription;
+    } 
+
     public class FlowPulseStruct
     {
-        public FlowPulseStruct(byte pusleOutNbr, byte pulseOutMode, byte logicUnit,
-            byte pulseOutEnable, byte pulseIsConfigured,
-            float weightPulse, ushort maxFrequency, ushort pulseDescription)
+        private PulseStruct _flowStruct;
+
+        public FlowPulseStruct(byte[] data)
         {
-            PusleOutNbr = pusleOutNbr;
-            PulseOutMode = pulseOutMode;
-            LogicUnit = logicUnit;
-            PulseOutEnable = pulseOutEnable;
-            PulseIsConfigured = pulseIsConfigured;
-            WeightPulse = weightPulse;
-            MaxFrequency = maxFrequency;
-            PulseDescription = pulseDescription;
+            _flowStruct = data.ToStruct<PulseStruct>();
         }
 
-        public byte PusleOutNbr { get; set; }
+        public FlowPulseStruct(PulseStruct flowStruct)
+        {
+            _flowStruct = flowStruct;
+        }
 
-        public byte PulseOutMode { get; set; }
-
-        public byte LogicUnit { get; set; }
-
-        public byte PulseOutEnable { get; set; }
-
-        public byte PulseIsConfigured { get; set; }
-
-        public float WeightPulse { get; set; }
-
-        public ushort MaxFrequency { get; set; }
-
-        public ushort PulseDescription { get; set; }
+        public PulseStruct FlowStruct
+        {
+            get { return _flowStruct; }
+        }
     }
 }

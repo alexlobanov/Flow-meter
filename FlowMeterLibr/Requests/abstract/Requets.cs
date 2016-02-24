@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using FlowMeterLibr.TO;
 
 namespace FlowMeterLibr.Requests
@@ -43,10 +44,7 @@ namespace FlowMeterLibr.Requests
                 tempdate[2] = sendData[2];
                 return tempdate;
             }
-            for (var i = 3; i <= 64; i++)
-            {
-                sendData[i] = data[i - 3];
-            }
+            Array.Copy(data,0,sendData,3,data.Length);
             return sendData;
         }
 
