@@ -21,8 +21,8 @@ namespace FlowMeterConnect
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
 
-            Application.ThreadException += ExceptionHandler.ApplicationOnThreadException;
-            AppDomain.CurrentDomain.UnhandledException += ExceptionHandler.CurrentDomain_UnhandledException;
+            /*Application.ThreadException += ExceptionHandler.ApplicationOnThreadException;
+            AppDomain.CurrentDomain.UnhandledException += ExceptionHandler.CurrentDomain_UnhandledException;*/
             //
         }
     }

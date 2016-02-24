@@ -1,54 +1,65 @@
 ﻿using System;
+using FlowMeterLibr.Сommunication;
 
 namespace FlowMeterLibr.Structs
 {
+    public struct DateStruct
+    {
+        public byte Day { get; set; }
+
+        public byte Month { get; set; }
+
+        public ushort Year { get; set; }
+
+        public byte Hour { get; set; }
+
+        public byte Minutes { get; set; }
+    }
+
     public class FlowDateStruct
     {
+        private DateStruct _flowStruct;
+        private DateTime convertedDateTime;
+
+        public DateStruct FlowStruct
+        {
+            get { return _flowStruct; }
+        }
+
+        public DateTime ConvertedDateTime
+        {
+            get { return convertedDateTime; }
+            set { convertedDateTime = value; }
+        }
+
         public FlowDateStruct()
         {
             ConvertedDateTime = new DateTime();
         }
 
-        public FlowDateStruct(int day, int month, int year, int hour, int minutes)
+        public FlowDateStruct(byte[] data)
         {
-            Day = day;
-            Month = month;
-            Year = year;
-            Hour = hour;
-            Minutes = minutes;
+            _flowStruct = data.ToStruct<DateStruct>();
+            ConvertedDateTime = new DateTime((int)_flowStruct.Year, (int)_flowStruct.Month, (int)_flowStruct.Day, (int)_flowStruct.Hour, (int)_flowStruct.Minutes, 0);
+        }
+
+        public FlowDateStruct(DateStruct data)
+        {
+            ConvertedDateTime = new DateTime((int)data.Year, (int)data.Month, (int)data.Day, (int)data.Hour, (int)data.Minutes,0);
+            _flowStruct = data;
         }
 
         public FlowDateStruct(DateTime convertedDateTime)
         {
             ConvertedDateTime = convertedDateTime;
+            _flowStruct.Year = ushort.Parse(convertedDateTime.Year.ToString());
+            _flowStruct.Month = byte.Parse(convertedDateTime.Month.ToString());
+            _flowStruct.Day = byte.Parse(convertedDateTime.Day.ToString());
+            _flowStruct.Hour = byte.Parse(convertedDateTime.Hour.ToString());
+            _flowStruct.Minutes = byte.Parse(convertedDateTime.Minute.ToString());
+
         }
-
-        public FlowDateStruct(byte[] data)
-        {
-            var year = data[5] << 8 | data[4];
-            Year = year;
-            Month = data[3];
-            Day = data[2];
-            Hour = data[6];
-            Minutes = data[7];
-        }
-
-        public DateTime ConvertedDateTime { get; set; }
-
-        public int Day { get; }
-
-        public int Month { get; }
-
-        public int Year { get; }
-
-        public int Hour { get; }
-
-        public int Minutes { get; }
-
-        public DateTime GetDateTime()
-        {
-            return new DateTime(Year, Month, Day, Hour, Minutes, 0);
-        }
+     
 
         public override string ToString()
         {

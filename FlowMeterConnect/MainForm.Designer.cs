@@ -32,33 +32,34 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelTypeOfWork = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.deviceSerialTextBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.deviceCrcTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.teTimeTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tpTimeTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.vMinusTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.vPlusTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.vModule1TextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.qCurrentTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBox21 = new System.Windows.Forms.TextBox();
@@ -72,7 +73,7 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.firmwareNameTextBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -160,33 +161,34 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.labelTypeOfWork);
             this.tabPage1.Controls.Add(this.textBox8);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.textBox12);
+            this.tabPage1.Controls.Add(this.deviceSerialTextBox);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.textBox9);
             this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.textBox10);
+            this.tabPage1.Controls.Add(this.deviceCrcTextBox);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.teTimeTextBox);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.tpTimeTextBox);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.vMinusTextBox);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.vPlusTextBox);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.vModule1TextBox);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.qCurrentTextBox);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
@@ -195,6 +197,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Измерения";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // labelTypeOfWork
+            // 
+            this.labelTypeOfWork.AutoSize = true;
+            this.labelTypeOfWork.Location = new System.Drawing.Point(195, 242);
+            this.labelTypeOfWork.Name = "labelTypeOfWork";
+            this.labelTypeOfWork.Size = new System.Drawing.Size(44, 13);
+            this.labelTypeOfWork.TabIndex = 35;
+            this.labelTypeOfWork.Text = "label49";
             // 
             // textBox8
             // 
@@ -215,14 +226,14 @@
             this.label8.TabIndex = 33;
             this.label8.Text = "ID:";
             // 
-            // textBox12
+            // deviceSerialTextBox
             // 
-            this.textBox12.Location = new System.Drawing.Point(33, 239);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(100, 22);
-            this.textBox12.TabIndex = 32;
-            this.textBox12.Text = "0x00";
+            this.deviceSerialTextBox.Location = new System.Drawing.Point(33, 239);
+            this.deviceSerialTextBox.Name = "deviceSerialTextBox";
+            this.deviceSerialTextBox.ReadOnly = true;
+            this.deviceSerialTextBox.Size = new System.Drawing.Size(100, 22);
+            this.deviceSerialTextBox.TabIndex = 32;
+            this.deviceSerialTextBox.Text = "0x00";
             // 
             // label16
             // 
@@ -238,9 +249,9 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(142, 242);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(162, 13);
+            this.label17.Size = new System.Drawing.Size(46, 13);
             this.label17.TabIndex = 29;
-            this.label17.Text = "Режим: НАСТРОЙКА (СЕРВИС)";
+            this.label17.Text = "Режим:";
             // 
             // button1
             // 
@@ -280,14 +291,14 @@
             this.label13.TabIndex = 21;
             this.label13.Text = "Версия ПО:";
             // 
-            // textBox10
+            // deviceCrcTextBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(257, 192);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 20;
-            this.textBox10.Text = "0xFFFFFFFF";
+            this.deviceCrcTextBox.Location = new System.Drawing.Point(257, 192);
+            this.deviceCrcTextBox.Name = "deviceCrcTextBox";
+            this.deviceCrcTextBox.ReadOnly = true;
+            this.deviceCrcTextBox.Size = new System.Drawing.Size(100, 22);
+            this.deviceCrcTextBox.TabIndex = 20;
+            this.deviceCrcTextBox.Text = "0xFFFFFFFF";
             // 
             // label14
             // 
@@ -346,14 +357,14 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Время:";
             // 
-            // textBox5
+            // teTimeTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(145, 122);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.Text = "00:00:01";
+            this.teTimeTextBox.Location = new System.Drawing.Point(145, 122);
+            this.teTimeTextBox.Name = "teTimeTextBox";
+            this.teTimeTextBox.ReadOnly = true;
+            this.teTimeTextBox.Size = new System.Drawing.Size(100, 22);
+            this.teTimeTextBox.TabIndex = 11;
+            this.teTimeTextBox.Text = "00:00:01";
             // 
             // label5
             // 
@@ -364,14 +375,14 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "tош., час:";
             // 
-            // textBox6
+            // tpTimeTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(33, 122);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 9;
-            this.textBox6.Text = "00:00:01";
+            this.tpTimeTextBox.Location = new System.Drawing.Point(33, 122);
+            this.tpTimeTextBox.Name = "tpTimeTextBox";
+            this.tpTimeTextBox.ReadOnly = true;
+            this.tpTimeTextBox.Size = new System.Drawing.Size(100, 22);
+            this.tpTimeTextBox.TabIndex = 9;
+            this.tpTimeTextBox.Text = "00:00:01";
             // 
             // label6
             // 
@@ -382,14 +393,14 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "tраб., час:";
             // 
-            // textBox4
+            // vMinusTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(369, 50);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.Text = "0,0000";
+            this.vMinusTextBox.Location = new System.Drawing.Point(369, 50);
+            this.vMinusTextBox.Name = "vMinusTextBox";
+            this.vMinusTextBox.ReadOnly = true;
+            this.vMinusTextBox.Size = new System.Drawing.Size(100, 22);
+            this.vMinusTextBox.TabIndex = 7;
+            this.vMinusTextBox.Text = "0,0000";
             // 
             // label4
             // 
@@ -400,14 +411,14 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "V-, м3:";
             // 
-            // textBox3
+            // vPlusTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(257, 50);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "0,0000";
+            this.vPlusTextBox.Location = new System.Drawing.Point(257, 50);
+            this.vPlusTextBox.Name = "vPlusTextBox";
+            this.vPlusTextBox.ReadOnly = true;
+            this.vPlusTextBox.Size = new System.Drawing.Size(100, 22);
+            this.vPlusTextBox.TabIndex = 5;
+            this.vPlusTextBox.Text = "0,0000";
             // 
             // label3
             // 
@@ -418,14 +429,14 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "V+, м3:";
             // 
-            // textBox2
+            // vModule1TextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "0,0000";
+            this.vModule1TextBox.Location = new System.Drawing.Point(145, 50);
+            this.vModule1TextBox.Name = "vModule1TextBox";
+            this.vModule1TextBox.ReadOnly = true;
+            this.vModule1TextBox.Size = new System.Drawing.Size(100, 22);
+            this.vModule1TextBox.TabIndex = 3;
+            this.vModule1TextBox.Text = "0,0000";
             // 
             // label2
             // 
@@ -436,14 +447,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "ΣV, м3:";
             // 
-            // textBox1
+            // qCurrentTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "0,0000";
+            this.qCurrentTextBox.Location = new System.Drawing.Point(33, 50);
+            this.qCurrentTextBox.Name = "qCurrentTextBox";
+            this.qCurrentTextBox.ReadOnly = true;
+            this.qCurrentTextBox.Size = new System.Drawing.Size(100, 22);
+            this.qCurrentTextBox.TabIndex = 1;
+            this.qCurrentTextBox.Text = "0,0000";
             // 
             // label1
             // 
@@ -467,7 +478,7 @@
             this.tabPage2.Controls.Add(this.textBox18);
             this.tabPage2.Controls.Add(this.label26);
             this.tabPage2.Controls.Add(this.label27);
-            this.tabPage2.Controls.Add(this.textBox13);
+            this.tabPage2.Controls.Add(this.firmwareNameTextBox);
             this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.textBox16);
             this.tabPage2.Controls.Add(this.label23);
@@ -584,14 +595,14 @@
             this.label27.TabIndex = 32;
             this.label27.Text = "Параметры";
             // 
-            // textBox13
+            // firmwareNameTextBox
             // 
-            this.textBox13.Enabled = false;
-            this.textBox13.Location = new System.Drawing.Point(145, 122);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 22);
-            this.textBox13.TabIndex = 31;
-            this.textBox13.Text = "0";
+            this.firmwareNameTextBox.Enabled = false;
+            this.firmwareNameTextBox.Location = new System.Drawing.Point(145, 122);
+            this.firmwareNameTextBox.Name = "firmwareNameTextBox";
+            this.firmwareNameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.firmwareNameTextBox.TabIndex = 31;
+            this.firmwareNameTextBox.Text = "0";
             // 
             // label22
             // 
@@ -1142,6 +1153,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FlowMeter Connect";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -1163,19 +1175,19 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox vMinusTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox vPlusTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox vModule1TextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox qCurrentTextBox;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox teTimeTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tpTimeTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -1184,9 +1196,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox deviceCrcTextBox;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox deviceSerialTextBox;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox8;
@@ -1200,7 +1212,7 @@
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox firmwareNameTextBox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label23;
@@ -1255,6 +1267,7 @@
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Timer timerConnect;
         private System.Windows.Forms.Timer timerUpdate;
+        private System.Windows.Forms.Label labelTypeOfWork;
     }
 }
 

@@ -27,3 +27,5 @@ C:\Users\User\Source\Repos\Flow-meter\HidLibrary\bin\Debug\HidLibrary.pdb
 C:\Users\User\Source\Repos\Flow-meter\HidLibrary\obj\Debug\HidLibrary.csprojResolveAssemblyReference.cache
 C:\Users\User\Source\Repos\Flow-meter\HidLibrary\obj\Debug\HidLibrary.dll
 C:\Users\User\Source\Repos\Flow-meter\HidLibrary\obj\Debug\HidLibrary.pdb
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\bin\Debug\HidLibrary.dll.CodeAnalysisLog.xml
+C:\Users\User\Source\Repos\Flow-meter\HidLibrary\bin\Debug\HidLibrary.dll.lastcodeanalysissucceeded

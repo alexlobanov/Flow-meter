@@ -27,14 +27,17 @@ namespace FlowMeterLibr.Structs
 
         public FlowConfigStruct(byte[] data)
         {
-            _flowStruct =  ConverterData.ToStruct<ConfigStruct>(data);
+            _flowStruct =  data.ToStruct<ConfigStruct>();
         }
-
-
 
         public override string ToString()
         {
             throw new Exception("No init");
+        }
+
+        public FlowConfigStruct(ConfigStruct flowStruct)
+        {
+            _flowStruct = flowStruct;
         }
     }
 }

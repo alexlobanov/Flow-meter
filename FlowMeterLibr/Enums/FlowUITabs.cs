@@ -8,6 +8,7 @@ namespace FlowMeterLibr.Enums
 {
     public enum FlowUITabs
     {
+        None = -1,
         DefaultTab = 0,
         SettingTab = 1,
         ServiceTab = 2

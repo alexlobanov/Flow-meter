@@ -515,8 +515,6 @@ namespace HidLibrary
                 overlapped.OffsetLow = 0;
                 overlapped.OffsetHigh = 0;
                 overlapped.EventHandle = NativeMethods.CreateEvent(ref security, Convert.ToInt32(false), Convert.ToInt32(true), "");
-                Debug.WriteLine(security.ToString());
-                Debug.WriteLine(overlapped.ToString());
                 try
                 {
                     NativeMethods.WriteFile(Handle, buffer, (uint)buffer.Length, out bytesWritten, ref overlapped);

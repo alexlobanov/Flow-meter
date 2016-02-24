@@ -3,11 +3,11 @@ using FlowMeterLibr.Requests;
 using FlowMeterLibr.TO;
 using HidLibrary;
 
-namespace FlowMeterLibr.Sending
+namespace FlowMeterLibr.Сommunication
 {
     public static class SendData
     {
-        public static Requets SendDataToDevice(FlowCommands command, ref HidDevice device)
+        public static Requets SendDataToDevice(this HidDevice device, FlowCommands command)
         {
             switch (command)
             {
@@ -21,13 +21,13 @@ namespace FlowMeterLibr.Sending
                     break;
 
                 case FlowCommands.MainCfg:
-                    return CreateConfigRequest(ref device);
+                    return new ConfigRequest(ref device);
 
                 case FlowCommands.USmetrVariablesCmd:
                     break;
 
                 case FlowCommands.RtcTime:
-                    return CreateDateRequest(ref device);
+                    return new DateRequest(ref device);
 
                 case FlowCommands.PulseCfg:
                     break;
@@ -36,8 +36,9 @@ namespace FlowMeterLibr.Sending
                     break;
 
                 case FlowCommands.DeviceInfo:
-                    break;
-
+                    return new ComonDevInfoRequest(ref device,FlowStatusRequest.Set);
+                case FlowCommands.DeviceInfoStop:
+                    return new ComonDevInfoRequest(ref device, FlowStatusRequest.Get);
                 case FlowCommands.FormatEEPROM:
                     break;
 
@@ -50,7 +51,7 @@ namespace FlowMeterLibr.Sending
             return default(Requets);
         }
 
-        public static Requets SendDataToDevice(FlowCommands commands, ref HidDevice device, byte[] data)
+        public static Requets SendDataToDevice<T>(this HidDevice device, FlowCommands commands, T structToSend) 
         {
             switch (commands)
             {
@@ -65,7 +66,7 @@ namespace FlowMeterLibr.Sending
                 case FlowCommands.USmetrVariablesCmd:
                     break;
                 case FlowCommands.RtcTime:
-                    break;
+                    return new DateRequest(ref device, structToSend);
                 case FlowCommands.PulseCfg:
                     break;
                 case FlowCommands.ModBusCfg:
@@ -80,16 +81,6 @@ namespace FlowMeterLibr.Sending
                     throw new ArgumentOutOfRangeException(nameof(commands), commands, null);
             }
             return default(Requets);
-        }
-
-        private static ConfigRequest CreateConfigRequest(ref HidDevice device)
-        {
-            return new ConfigRequest(ref device);
-        }
-
-        private static DateRequest CreateDateRequest(ref HidDevice device)
-        {
-            return new DateRequest(ref device);
         }
     }
 }
