@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using FlowMeterLibr.Requests;
 using FlowMeterLibr.TO;
 using HidLibrary;
@@ -12,38 +13,41 @@ namespace FlowMeterLibr.Сommunication
             switch (command)
             {
                 case FlowCommands.FactoryReset:
-                    break;
+                    return new FactoryResetRequest(ref device);
 
                 case FlowCommands.SaveAllSettings2memory:
-                    break;
+                    return new SaveAllSettingsRequest(ref device);
 
                 case FlowCommands.DiveceError2Usb:
+                    //TODO: AddErrorsList
                     break;
 
                 case FlowCommands.MainCfg:
                     return new ConfigRequest(ref device);
 
                 case FlowCommands.USmetrVariablesCmd:
+                    //unused
                     break;
 
                 case FlowCommands.RtcTime:
                     return new DateRequest(ref device);
 
                 case FlowCommands.PulseCfg:
-                    break;
+                    return new PulseRequest(ref device); 
 
                 case FlowCommands.ModBusCfg:
-                    break;
+                    return new ModBusRequest(ref device);
 
                 case FlowCommands.DeviceInfo:
                     return new ComonDevInfoRequest(ref device,FlowStatusRequest.Set);
                 case FlowCommands.DeviceInfoStop:
                     return new ComonDevInfoRequest(ref device, FlowStatusRequest.Get);
+
                 case FlowCommands.FormatEEPROM:
-                    break;
+                    return new FormatEEPROMRequest(ref device);
 
                 case FlowCommands.RunCalibrate:
-                    break;
+                    return new CallibrationRequest(ref device);
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(command), command, null);
@@ -62,14 +66,16 @@ namespace FlowMeterLibr.Сommunication
                 case FlowCommands.DiveceError2Usb:
                     break;
                 case FlowCommands.MainCfg:
-                    break;
+                    return new ConfigRequest(ref device, structToSend);
                 case FlowCommands.USmetrVariablesCmd:
                     break;
                 case FlowCommands.RtcTime:
                     return new DateRequest(ref device, structToSend);
                 case FlowCommands.PulseCfg:
+                    return new PulseRequest(ref device, structToSend);
                     break;
                 case FlowCommands.ModBusCfg:
+                    return new ModBusRequest(ref device, structToSend);
                     break;
                 case FlowCommands.DeviceInfo:
                     break;

@@ -12,7 +12,7 @@ namespace FlowMeterConnect
         }
 
         public static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-        {
+        { 
             try
             {
                 var errorMsg = "An application error occurred. Please contact the adminstrator " +

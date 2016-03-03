@@ -14,7 +14,7 @@ namespace FlowMeterLibr.Requests
             : base(
                   FlowIdParkage.DataOutId, 
                   FlowCommands.DeviceInfo,
-                  flowStatusRequest //Потоковая передача данных
+                  flowStatusRequest 
                   )
         {
             var data = getDataToSend();

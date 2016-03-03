@@ -1,19 +1,21 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using FlowMeterLibr.Сommunication;
 
 namespace FlowMeterLibr.Structs
 {
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Size = 6), Serializable]
     public struct DateStruct
     {
-        public byte Day { get; set; }
+        public byte Day { get; set; } //1
 
-        public byte Month { get; set; }
+        public byte Month { get; set; } //1
 
-        public ushort Year { get; set; }
+        public ushort Year { get; set; } //2
 
-        public byte Hour { get; set; }
+        public byte Hour { get; set; } //1
 
-        public byte Minutes { get; set; }
+        public byte Minutes { get; set; } //1
     }
 
     public class FlowDateStruct

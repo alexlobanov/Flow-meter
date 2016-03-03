@@ -24,11 +24,11 @@ namespace FlowMeterLibr.Structs
 
         public UInt32 DeviceCrc1; //4
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 11)]
+        public UInt32 DeviceSerial; //4
+
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 10)]
 
         public string FirmwareName; //17??
-
-        public UInt32 DeviceSerial; //4
     }
 
     public class FlowCommonDevInfo

@@ -40,7 +40,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.firmwareTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.deviceCrcTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -61,72 +61,74 @@
             this.label2 = new System.Windows.Forms.Label();
             this.qCurrentTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelAnnimate = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.nbrValuesForCalTextBox = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.nbrValuesTextBox = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.nullThresoldTextBox = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.coTextBox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.firmwareNameTextBox = new System.Windows.Forms.TextBox();
+            this.k2textBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.angleTextBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.sensorDistanseTextBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.dVnutTextBox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.maxFrequencyTextBox = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.weightPulseTextBox = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.maxFreq2TextBox = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.weightPulse2 = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.MbSlaveAdress = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.mBbaudRateComboBox = new System.Windows.Forms.ComboBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.mbparityModeComboBox = new System.Windows.Forms.ComboBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.pulseDescription2ComboBox = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.pulseDescrComboBox = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.pulseOutEnable2ComboBox = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.pulseOutEnableComboBox = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.logicUnit2ComboBox = new System.Windows.Forms.ComboBox();
+            this.logicUnitComboBox = new System.Windows.Forms.ComboBox();
+            this.pulseOutModeComboBox = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.pulseOutMode2ComboBox = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonFactoryReset = new System.Windows.Forms.Button();
+            this.buttonCalibrate = new System.Windows.Forms.Button();
+            this.buttonSaveChanges = new System.Windows.Forms.Button();
             this.timerConnect = new System.Windows.Forms.Timer(this.components);
             this.timerUpdate = new System.Windows.Forms.Timer(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -138,7 +140,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.tabControl1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(3);
@@ -161,6 +162,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.labelTypeOfWork);
             this.tabPage1.Controls.Add(this.textBox8);
             this.tabPage1.Controls.Add(this.label8);
@@ -169,7 +171,7 @@
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.textBox9);
+            this.tabPage1.Controls.Add(this.firmwareTextBox);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.deviceCrcTextBox);
             this.tabPage1.Controls.Add(this.label14);
@@ -190,6 +192,7 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.qCurrentTextBox);
             this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.panelAnnimate);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -203,9 +206,9 @@
             this.labelTypeOfWork.AutoSize = true;
             this.labelTypeOfWork.Location = new System.Drawing.Point(195, 242);
             this.labelTypeOfWork.Name = "labelTypeOfWork";
-            this.labelTypeOfWork.Size = new System.Drawing.Size(44, 13);
+            this.labelTypeOfWork.Size = new System.Drawing.Size(103, 13);
             this.labelTypeOfWork.TabIndex = 35;
-            this.labelTypeOfWork.Text = "label49";
+            this.labelTypeOfWork.Text = "Нет подключения";
             // 
             // textBox8
             // 
@@ -273,14 +276,14 @@
             this.label12.TabIndex = 23;
             this.label12.Text = "Прибор";
             // 
-            // textBox9
+            // firmwareTextBox
             // 
-            this.textBox9.Location = new System.Drawing.Point(145, 192);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 22;
-            this.textBox9.Text = "X.X.Xa";
+            this.firmwareTextBox.Location = new System.Drawing.Point(145, 192);
+            this.firmwareTextBox.Name = "firmwareTextBox";
+            this.firmwareTextBox.ReadOnly = true;
+            this.firmwareTextBox.Size = new System.Drawing.Size(100, 22);
+            this.firmwareTextBox.TabIndex = 22;
+            this.firmwareTextBox.Text = "X.X.Xa";
             // 
             // label13
             // 
@@ -461,35 +464,43 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(30, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Q, м3/ч:";
             // 
+            // panelAnnimate
+            // 
+            this.panelAnnimate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAnnimate.Location = new System.Drawing.Point(3, 3);
+            this.panelAnnimate.Name = "panelAnnimate";
+            this.panelAnnimate.Size = new System.Drawing.Size(604, 350);
+            this.panelAnnimate.TabIndex = 36;
+            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox21);
+            this.tabPage2.Controls.Add(this.nbrValuesForCalTextBox);
             this.tabPage2.Controls.Add(this.label43);
-            this.tabPage2.Controls.Add(this.textBox22);
+            this.tabPage2.Controls.Add(this.nbrValuesTextBox);
             this.tabPage2.Controls.Add(this.label44);
-            this.tabPage2.Controls.Add(this.textBox19);
+            this.tabPage2.Controls.Add(this.nullThresoldTextBox);
             this.tabPage2.Controls.Add(this.label28);
             this.tabPage2.Controls.Add(this.textBox17);
             this.tabPage2.Controls.Add(this.label25);
-            this.tabPage2.Controls.Add(this.textBox18);
+            this.tabPage2.Controls.Add(this.coTextBox);
             this.tabPage2.Controls.Add(this.label26);
             this.tabPage2.Controls.Add(this.label27);
-            this.tabPage2.Controls.Add(this.firmwareNameTextBox);
+            this.tabPage2.Controls.Add(this.k2textBox);
             this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.textBox16);
             this.tabPage2.Controls.Add(this.label23);
             this.tabPage2.Controls.Add(this.label24);
             this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.textBox14);
+            this.tabPage2.Controls.Add(this.angleTextBox);
             this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.textBox15);
+            this.tabPage2.Controls.Add(this.sensorDistanseTextBox);
             this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.textBox11);
+            this.tabPage2.Controls.Add(this.dVnutTextBox);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
@@ -500,13 +511,13 @@
             this.tabPage2.Text = "Настройка";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox21
+            // nbrValuesForCalTextBox
             // 
-            this.textBox21.Location = new System.Drawing.Point(145, 318);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(100, 22);
-            this.textBox21.TabIndex = 42;
-            this.textBox21.Text = "0";
+            this.nbrValuesForCalTextBox.Location = new System.Drawing.Point(145, 318);
+            this.nbrValuesForCalTextBox.Name = "nbrValuesForCalTextBox";
+            this.nbrValuesForCalTextBox.Size = new System.Drawing.Size(100, 22);
+            this.nbrValuesForCalTextBox.TabIndex = 42;
+            this.nbrValuesForCalTextBox.Text = "0";
             // 
             // label43
             // 
@@ -517,13 +528,13 @@
             this.label43.TabIndex = 41;
             this.label43.Text = "nbr_values_for_calibrates:";
             // 
-            // textBox22
+            // nbrValuesTextBox
             // 
-            this.textBox22.Location = new System.Drawing.Point(33, 318);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(100, 22);
-            this.textBox22.TabIndex = 40;
-            this.textBox22.Text = "0";
+            this.nbrValuesTextBox.Location = new System.Drawing.Point(33, 318);
+            this.nbrValuesTextBox.Name = "nbrValuesTextBox";
+            this.nbrValuesTextBox.Size = new System.Drawing.Size(100, 22);
+            this.nbrValuesTextBox.TabIndex = 40;
+            this.nbrValuesTextBox.Text = "0";
             // 
             // label44
             // 
@@ -534,13 +545,13 @@
             this.label44.TabIndex = 39;
             this.label44.Text = "nbr_values_for_avg:";
             // 
-            // textBox19
+            // nullThresoldTextBox
             // 
-            this.textBox19.Location = new System.Drawing.Point(257, 192);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 22);
-            this.textBox19.TabIndex = 38;
-            this.textBox19.Text = "0,0000";
+            this.nullThresoldTextBox.Location = new System.Drawing.Point(257, 192);
+            this.nullThresoldTextBox.Name = "nullThresoldTextBox";
+            this.nullThresoldTextBox.Size = new System.Drawing.Size(100, 22);
+            this.nullThresoldTextBox.TabIndex = 38;
+            this.nullThresoldTextBox.Text = "0,0000";
             // 
             // label28
             // 
@@ -568,13 +579,14 @@
             this.label25.TabIndex = 35;
             this.label25.Text = "dT0, мкс:";
             // 
-            // textBox18
+            // coTextBox
             // 
-            this.textBox18.Location = new System.Drawing.Point(33, 192);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 22);
-            this.textBox18.TabIndex = 34;
-            this.textBox18.Text = "1403-1543";
+            this.coTextBox.Location = new System.Drawing.Point(33, 192);
+            this.coTextBox.Name = "coTextBox";
+            this.coTextBox.Size = new System.Drawing.Size(100, 22);
+            this.coTextBox.TabIndex = 34;
+            this.coTextBox.Text = "1403-1543";
+            this.coTextBox.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
             // label26
             // 
@@ -595,14 +607,14 @@
             this.label27.TabIndex = 32;
             this.label27.Text = "Параметры";
             // 
-            // firmwareNameTextBox
+            // k2textBox
             // 
-            this.firmwareNameTextBox.Enabled = false;
-            this.firmwareNameTextBox.Location = new System.Drawing.Point(145, 122);
-            this.firmwareNameTextBox.Name = "firmwareNameTextBox";
-            this.firmwareNameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.firmwareNameTextBox.TabIndex = 31;
-            this.firmwareNameTextBox.Text = "0";
+            this.k2textBox.Enabled = false;
+            this.k2textBox.Location = new System.Drawing.Point(145, 122);
+            this.k2textBox.Name = "k2textBox";
+            this.k2textBox.Size = new System.Drawing.Size(100, 22);
+            this.k2textBox.TabIndex = 31;
+            this.k2textBox.Text = "0";
             // 
             // label22
             // 
@@ -662,13 +674,13 @@
             this.label19.TabIndex = 24;
             this.label19.Text = "Схема:";
             // 
-            // textBox14
+            // angleTextBox
             // 
-            this.textBox14.Location = new System.Drawing.Point(257, 50);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 22);
-            this.textBox14.TabIndex = 23;
-            this.textBox14.Text = "0,00";
+            this.angleTextBox.Location = new System.Drawing.Point(257, 50);
+            this.angleTextBox.Name = "angleTextBox";
+            this.angleTextBox.Size = new System.Drawing.Size(100, 22);
+            this.angleTextBox.TabIndex = 23;
+            this.angleTextBox.Text = "0,00";
             // 
             // label20
             // 
@@ -679,13 +691,13 @@
             this.label20.TabIndex = 22;
             this.label20.Text = "Угол, °:";
             // 
-            // textBox15
+            // sensorDistanseTextBox
             // 
-            this.textBox15.Location = new System.Drawing.Point(145, 50);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 22);
-            this.textBox15.TabIndex = 21;
-            this.textBox15.Text = "0,00";
+            this.sensorDistanseTextBox.Location = new System.Drawing.Point(145, 50);
+            this.sensorDistanseTextBox.Name = "sensorDistanseTextBox";
+            this.sensorDistanseTextBox.Size = new System.Drawing.Size(100, 22);
+            this.sensorDistanseTextBox.TabIndex = 21;
+            this.sensorDistanseTextBox.Text = "0,00";
             // 
             // label21
             // 
@@ -696,13 +708,13 @@
             this.label21.TabIndex = 20;
             this.label21.Text = "База, мм:";
             // 
-            // textBox11
+            // dVnutTextBox
             // 
-            this.textBox11.Location = new System.Drawing.Point(33, 50);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 22);
-            this.textBox11.TabIndex = 19;
-            this.textBox11.Text = "0,00";
+            this.dVnutTextBox.Location = new System.Drawing.Point(33, 50);
+            this.dVnutTextBox.Name = "dVnutTextBox";
+            this.dVnutTextBox.Size = new System.Drawing.Size(100, 22);
+            this.dVnutTextBox.TabIndex = 19;
+            this.dVnutTextBox.Text = "0,00";
             // 
             // label18
             // 
@@ -725,34 +737,34 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.textBox25);
+            this.tabPage3.Controls.Add(this.maxFrequencyTextBox);
             this.tabPage3.Controls.Add(this.label47);
-            this.tabPage3.Controls.Add(this.textBox26);
+            this.tabPage3.Controls.Add(this.weightPulseTextBox);
             this.tabPage3.Controls.Add(this.label48);
-            this.tabPage3.Controls.Add(this.textBox23);
+            this.tabPage3.Controls.Add(this.maxFreq2TextBox);
             this.tabPage3.Controls.Add(this.label45);
-            this.tabPage3.Controls.Add(this.textBox24);
+            this.tabPage3.Controls.Add(this.weightPulse2);
             this.tabPage3.Controls.Add(this.label46);
-            this.tabPage3.Controls.Add(this.textBox20);
+            this.tabPage3.Controls.Add(this.MbSlaveAdress);
             this.tabPage3.Controls.Add(this.label42);
-            this.tabPage3.Controls.Add(this.comboBox11);
+            this.tabPage3.Controls.Add(this.mBbaudRateComboBox);
             this.tabPage3.Controls.Add(this.label41);
-            this.tabPage3.Controls.Add(this.comboBox9);
+            this.tabPage3.Controls.Add(this.mbparityModeComboBox);
             this.tabPage3.Controls.Add(this.label40);
             this.tabPage3.Controls.Add(this.label39);
-            this.tabPage3.Controls.Add(this.comboBox10);
+            this.tabPage3.Controls.Add(this.pulseDescription2ComboBox);
             this.tabPage3.Controls.Add(this.label38);
-            this.tabPage3.Controls.Add(this.comboBox8);
+            this.tabPage3.Controls.Add(this.pulseDescrComboBox);
             this.tabPage3.Controls.Add(this.label37);
-            this.tabPage3.Controls.Add(this.comboBox7);
+            this.tabPage3.Controls.Add(this.pulseOutEnable2ComboBox);
             this.tabPage3.Controls.Add(this.label36);
-            this.tabPage3.Controls.Add(this.comboBox6);
+            this.tabPage3.Controls.Add(this.pulseOutEnableComboBox);
             this.tabPage3.Controls.Add(this.label35);
-            this.tabPage3.Controls.Add(this.comboBox5);
-            this.tabPage3.Controls.Add(this.comboBox4);
-            this.tabPage3.Controls.Add(this.comboBox3);
+            this.tabPage3.Controls.Add(this.logicUnit2ComboBox);
+            this.tabPage3.Controls.Add(this.logicUnitComboBox);
+            this.tabPage3.Controls.Add(this.pulseOutModeComboBox);
             this.tabPage3.Controls.Add(this.label34);
-            this.tabPage3.Controls.Add(this.comboBox2);
+            this.tabPage3.Controls.Add(this.pulseOutMode2ComboBox);
             this.tabPage3.Controls.Add(this.label29);
             this.tabPage3.Controls.Add(this.label30);
             this.tabPage3.Controls.Add(this.label31);
@@ -766,13 +778,13 @@
             this.tabPage3.Text = "Сервис";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox25
+            // maxFrequencyTextBox
             // 
-            this.textBox25.Location = new System.Drawing.Point(145, 144);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(100, 22);
-            this.textBox25.TabIndex = 63;
-            this.textBox25.Text = "0";
+            this.maxFrequencyTextBox.Location = new System.Drawing.Point(145, 144);
+            this.maxFrequencyTextBox.Name = "maxFrequencyTextBox";
+            this.maxFrequencyTextBox.Size = new System.Drawing.Size(100, 22);
+            this.maxFrequencyTextBox.TabIndex = 63;
+            this.maxFrequencyTextBox.Text = "0";
             // 
             // label47
             // 
@@ -783,13 +795,13 @@
             this.label47.TabIndex = 62;
             this.label47.Text = "max_frequency:";
             // 
-            // textBox26
+            // weightPulseTextBox
             // 
-            this.textBox26.Location = new System.Drawing.Point(33, 144);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(100, 22);
-            this.textBox26.TabIndex = 61;
-            this.textBox26.Text = "0";
+            this.weightPulseTextBox.Location = new System.Drawing.Point(33, 144);
+            this.weightPulseTextBox.Name = "weightPulseTextBox";
+            this.weightPulseTextBox.Size = new System.Drawing.Size(100, 22);
+            this.weightPulseTextBox.TabIndex = 61;
+            this.weightPulseTextBox.Text = "0";
             // 
             // label48
             // 
@@ -800,13 +812,13 @@
             this.label48.TabIndex = 60;
             this.label48.Text = "weight_pulse:";
             // 
-            // textBox23
+            // maxFreq2TextBox
             // 
-            this.textBox23.Location = new System.Drawing.Point(390, 144);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 22);
-            this.textBox23.TabIndex = 59;
-            this.textBox23.Text = "0";
+            this.maxFreq2TextBox.Location = new System.Drawing.Point(390, 144);
+            this.maxFreq2TextBox.Name = "maxFreq2TextBox";
+            this.maxFreq2TextBox.Size = new System.Drawing.Size(100, 22);
+            this.maxFreq2TextBox.TabIndex = 59;
+            this.maxFreq2TextBox.Text = "0";
             // 
             // label45
             // 
@@ -817,13 +829,13 @@
             this.label45.TabIndex = 58;
             this.label45.Text = "max_frequency:";
             // 
-            // textBox24
+            // weightPulse2
             // 
-            this.textBox24.Location = new System.Drawing.Point(278, 144);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(100, 22);
-            this.textBox24.TabIndex = 57;
-            this.textBox24.Text = "0";
+            this.weightPulse2.Location = new System.Drawing.Point(278, 144);
+            this.weightPulse2.Name = "weightPulse2";
+            this.weightPulse2.Size = new System.Drawing.Size(100, 22);
+            this.weightPulse2.TabIndex = 57;
+            this.weightPulse2.Text = "0";
             // 
             // label46
             // 
@@ -834,13 +846,13 @@
             this.label46.TabIndex = 56;
             this.label46.Text = "weight_pulse:";
             // 
-            // textBox20
+            // MbSlaveAdress
             // 
-            this.textBox20.Location = new System.Drawing.Point(33, 260);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(126, 22);
-            this.textBox20.TabIndex = 55;
-            this.textBox20.Text = "1-247";
+            this.MbSlaveAdress.Location = new System.Drawing.Point(33, 260);
+            this.MbSlaveAdress.Name = "MbSlaveAdress";
+            this.MbSlaveAdress.Size = new System.Drawing.Size(126, 22);
+            this.MbSlaveAdress.TabIndex = 55;
+            this.MbSlaveAdress.Text = "1-247";
             // 
             // label42
             // 
@@ -851,14 +863,14 @@
             this.label42.TabIndex = 54;
             this.label42.Text = "Адрес в сети ModBus:";
             // 
-            // comboBox11
+            // mBbaudRateComboBox
             // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(171, 260);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(74, 21);
-            this.comboBox11.TabIndex = 53;
-            this.comboBox11.Text = "9600";
+            this.mBbaudRateComboBox.FormattingEnabled = true;
+            this.mBbaudRateComboBox.Location = new System.Drawing.Point(171, 260);
+            this.mBbaudRateComboBox.Name = "mBbaudRateComboBox";
+            this.mBbaudRateComboBox.Size = new System.Drawing.Size(74, 21);
+            this.mBbaudRateComboBox.TabIndex = 53;
+            this.mBbaudRateComboBox.Text = "9600";
             // 
             // label41
             // 
@@ -869,14 +881,14 @@
             this.label41.TabIndex = 52;
             this.label41.Text = "Скорость:";
             // 
-            // comboBox9
+            // mbparityModeComboBox
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(33, 308);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(126, 21);
-            this.comboBox9.TabIndex = 51;
-            this.comboBox9.Text = "Нет";
+            this.mbparityModeComboBox.FormattingEnabled = true;
+            this.mbparityModeComboBox.Location = new System.Drawing.Point(33, 308);
+            this.mbparityModeComboBox.Name = "mbparityModeComboBox";
+            this.mbparityModeComboBox.Size = new System.Drawing.Size(126, 21);
+            this.mbparityModeComboBox.TabIndex = 51;
+            this.mbparityModeComboBox.Text = "Нет";
             // 
             // label40
             // 
@@ -897,18 +909,17 @@
             this.label39.TabIndex = 49;
             this.label39.Text = "ModBus RTU (RS485)";
             // 
-            // comboBox10
+            // pulseDescription2ComboBox
             // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "ΣV - по модулю",
+            this.pulseDescription2ComboBox.FormattingEnabled = true;
+            this.pulseDescription2ComboBox.Items.AddRange(new object[] {
             "V+ прямой",
             "V- обратный"});
-            this.comboBox10.Location = new System.Drawing.Point(278, 98);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(126, 21);
-            this.comboBox10.TabIndex = 48;
-            this.comboBox10.Text = "ΣV - по модулю";
+            this.pulseDescription2ComboBox.Location = new System.Drawing.Point(278, 98);
+            this.pulseDescription2ComboBox.Name = "pulseDescription2ComboBox";
+            this.pulseDescription2ComboBox.Size = new System.Drawing.Size(126, 21);
+            this.pulseDescription2ComboBox.TabIndex = 48;
+            this.pulseDescription2ComboBox.Text = "ΣV - по модулю";
             // 
             // label38
             // 
@@ -919,18 +930,17 @@
             this.label38.TabIndex = 46;
             this.label38.Text = "Расход (объем):";
             // 
-            // comboBox8
+            // pulseDescrComboBox
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "ΣV - по модулю",
+            this.pulseDescrComboBox.FormattingEnabled = true;
+            this.pulseDescrComboBox.Items.AddRange(new object[] {
             "V+ прямой",
             "V- обратный"});
-            this.comboBox8.Location = new System.Drawing.Point(33, 98);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(126, 21);
-            this.comboBox8.TabIndex = 45;
-            this.comboBox8.Text = "ΣV - по модулю";
+            this.pulseDescrComboBox.Location = new System.Drawing.Point(33, 98);
+            this.pulseDescrComboBox.Name = "pulseDescrComboBox";
+            this.pulseDescrComboBox.Size = new System.Drawing.Size(126, 21);
+            this.pulseDescrComboBox.TabIndex = 45;
+            this.pulseDescrComboBox.Text = "ΣV - по модулю";
             // 
             // label37
             // 
@@ -941,18 +951,18 @@
             this.label37.TabIndex = 44;
             this.label37.Text = "Расход (объем):";
             // 
-            // comboBox7
+            // pulseOutEnable2ComboBox
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.pulseOutEnable2ComboBox.FormattingEnabled = true;
+            this.pulseOutEnable2ComboBox.Items.AddRange(new object[] {
             "Включен",
             "Отключен"});
-            this.comboBox7.Location = new System.Drawing.Point(278, 191);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(100, 21);
-            this.comboBox7.TabIndex = 43;
-            this.comboBox7.Text = "Включен";
-            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
+            this.pulseOutEnable2ComboBox.Location = new System.Drawing.Point(278, 191);
+            this.pulseOutEnable2ComboBox.Name = "pulseOutEnable2ComboBox";
+            this.pulseOutEnable2ComboBox.Size = new System.Drawing.Size(100, 21);
+            this.pulseOutEnable2ComboBox.TabIndex = 43;
+            this.pulseOutEnable2ComboBox.Text = "Включен";
+            this.pulseOutEnable2ComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // label36
             // 
@@ -963,18 +973,18 @@
             this.label36.TabIndex = 42;
             this.label36.Text = "Состояние:";
             // 
-            // comboBox6
+            // pulseOutEnableComboBox
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.pulseOutEnableComboBox.FormattingEnabled = true;
+            this.pulseOutEnableComboBox.Items.AddRange(new object[] {
             "Включен",
             "Отключен"});
-            this.comboBox6.Location = new System.Drawing.Point(33, 191);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(100, 21);
-            this.comboBox6.TabIndex = 41;
-            this.comboBox6.Text = "Включен";
-            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+            this.pulseOutEnableComboBox.Location = new System.Drawing.Point(33, 191);
+            this.pulseOutEnableComboBox.Name = "pulseOutEnableComboBox";
+            this.pulseOutEnableComboBox.Size = new System.Drawing.Size(100, 21);
+            this.pulseOutEnableComboBox.TabIndex = 41;
+            this.pulseOutEnableComboBox.Text = "Включен";
+            this.pulseOutEnableComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // label35
             // 
@@ -985,43 +995,43 @@
             this.label35.TabIndex = 40;
             this.label35.Text = "Состояние:";
             // 
-            // comboBox5
+            // logicUnit2ComboBox
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.logicUnit2ComboBox.FormattingEnabled = true;
+            this.logicUnit2ComboBox.Items.AddRange(new object[] {
             "Низкий (0)",
             "Высокий (1)"});
-            this.comboBox5.Location = new System.Drawing.Point(390, 51);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(100, 21);
-            this.comboBox5.TabIndex = 39;
-            this.comboBox5.Text = "Низкий (0)";
+            this.logicUnit2ComboBox.Location = new System.Drawing.Point(390, 51);
+            this.logicUnit2ComboBox.Name = "logicUnit2ComboBox";
+            this.logicUnit2ComboBox.Size = new System.Drawing.Size(100, 21);
+            this.logicUnit2ComboBox.TabIndex = 39;
+            this.logicUnit2ComboBox.Text = "Низкий (0)";
             // 
-            // comboBox4
+            // logicUnitComboBox
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.logicUnitComboBox.FormattingEnabled = true;
+            this.logicUnitComboBox.Items.AddRange(new object[] {
             "Низкий (0)",
             "Высокий (1)"});
-            this.comboBox4.Location = new System.Drawing.Point(145, 51);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(100, 21);
-            this.comboBox4.TabIndex = 38;
-            this.comboBox4.Text = "Низкий (0)";
+            this.logicUnitComboBox.Location = new System.Drawing.Point(145, 51);
+            this.logicUnitComboBox.Name = "logicUnitComboBox";
+            this.logicUnitComboBox.Size = new System.Drawing.Size(100, 21);
+            this.logicUnitComboBox.TabIndex = 38;
+            this.logicUnitComboBox.Text = "Низкий (0)";
             // 
-            // comboBox3
+            // pulseOutModeComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.pulseOutModeComboBox.FormattingEnabled = true;
+            this.pulseOutModeComboBox.Items.AddRange(new object[] {
             "Импульсный",
             "Частотный",
             "Логический"});
-            this.comboBox3.Location = new System.Drawing.Point(33, 51);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
-            this.comboBox3.TabIndex = 37;
-            this.comboBox3.Text = "Импульсный";
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.pulseOutModeComboBox.Location = new System.Drawing.Point(33, 51);
+            this.pulseOutModeComboBox.Name = "pulseOutModeComboBox";
+            this.pulseOutModeComboBox.Size = new System.Drawing.Size(100, 21);
+            this.pulseOutModeComboBox.TabIndex = 37;
+            this.pulseOutModeComboBox.Text = "Импульсный";
+            this.pulseOutModeComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label34
             // 
@@ -1033,19 +1043,19 @@
             this.label34.TabIndex = 36;
             this.label34.Text = "Выход N2";
             // 
-            // comboBox2
+            // pulseOutMode2ComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.pulseOutMode2ComboBox.FormattingEnabled = true;
+            this.pulseOutMode2ComboBox.Items.AddRange(new object[] {
             "Импульсный",
             "Частотный",
             "Логический"});
-            this.comboBox2.Location = new System.Drawing.Point(278, 51);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 21);
-            this.comboBox2.TabIndex = 35;
-            this.comboBox2.Text = "Импульсный";
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.pulseOutMode2ComboBox.Location = new System.Drawing.Point(278, 51);
+            this.pulseOutMode2ComboBox.Name = "pulseOutMode2ComboBox";
+            this.pulseOutMode2ComboBox.Size = new System.Drawing.Size(100, 21);
+            this.pulseOutMode2ComboBox.TabIndex = 35;
+            this.pulseOutMode2ComboBox.Text = "Импульсный";
+            this.pulseOutMode2ComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label29
             // 
@@ -1096,43 +1106,44 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.buttonFactoryReset);
+            this.panel2.Controls.Add(this.buttonCalibrate);
+            this.panel2.Controls.Add(this.buttonSaveChanges);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 423);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(624, 44);
             this.panel2.TabIndex = 1;
             // 
-            // button4
+            // buttonFactoryReset
             // 
-            this.button4.Location = new System.Drawing.Point(469, 9);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 26);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Заводские настройки...";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonFactoryReset.Location = new System.Drawing.Point(465, 9);
+            this.buttonFactoryReset.Name = "buttonFactoryReset";
+            this.buttonFactoryReset.Size = new System.Drawing.Size(147, 26);
+            this.buttonFactoryReset.TabIndex = 26;
+            this.buttonFactoryReset.Text = "Заводские настройки...";
+            this.buttonFactoryReset.UseVisualStyleBackColor = true;
+            this.buttonFactoryReset.Click += new System.EventHandler(this.FactoryResetClick);
             // 
-            // button3
+            // buttonCalibrate
             // 
-            this.button3.Location = new System.Drawing.Point(172, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 26);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Калибровка...";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonCalibrate.Location = new System.Drawing.Point(172, 9);
+            this.buttonCalibrate.Name = "buttonCalibrate";
+            this.buttonCalibrate.Size = new System.Drawing.Size(120, 26);
+            this.buttonCalibrate.TabIndex = 25;
+            this.buttonCalibrate.Text = "Калибровка...";
+            this.buttonCalibrate.UseVisualStyleBackColor = true;
+            this.buttonCalibrate.Click += new System.EventHandler(this.CalibrationClick);
             // 
-            // button2
+            // buttonSaveChanges
             // 
-            this.button2.Location = new System.Drawing.Point(22, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 26);
-            this.button2.TabIndex = 0;
-            this.button2.Text = " Запись конфигурации";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSaveChanges.Location = new System.Drawing.Point(22, 9);
+            this.buttonSaveChanges.Name = "buttonSaveChanges";
+            this.buttonSaveChanges.Size = new System.Drawing.Size(144, 26);
+            this.buttonSaveChanges.TabIndex = 0;
+            this.buttonSaveChanges.Text = " Запись конфигурации";
+            this.buttonSaveChanges.UseVisualStyleBackColor = true;
+            this.buttonSaveChanges.Click += new System.EventHandler(this.buttonSave_ValueChanged);
             // 
             // timerConnect
             // 
@@ -1142,6 +1153,14 @@
             // 
             this.timerUpdate.Interval = 1000;
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(624, 467);
+            this.panel3.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1149,7 +1168,10 @@
             this.ClientSize = new System.Drawing.Size(624, 467);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MaximumSize = new System.Drawing.Size(640, 506);
+            this.MinimumSize = new System.Drawing.Size(640, 506);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FlowMeter Connect";
@@ -1194,7 +1216,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox firmwareTextBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox deviceCrcTextBox;
         private System.Windows.Forms.Label label14;
@@ -1204,70 +1226,72 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox dVnutTextBox;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox angleTextBox;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox sensorDistanseTextBox;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox firmwareNameTextBox;
+        private System.Windows.Forms.TextBox k2textBox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox coTextBox;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox nullThresoldTextBox;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button buttonSaveChanges;
+        private System.Windows.Forms.Button buttonFactoryReset;
+        private System.Windows.Forms.Button buttonCalibrate;
+        private System.Windows.Forms.ComboBox logicUnit2ComboBox;
+        private System.Windows.Forms.ComboBox logicUnitComboBox;
+        private System.Windows.Forms.ComboBox pulseOutModeComboBox;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox pulseOutMode2ComboBox;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox pulseOutEnable2ComboBox;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox pulseOutEnableComboBox;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox pulseDescrComboBox;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox pulseDescription2ComboBox;
+        private System.Windows.Forms.ComboBox mBbaudRateComboBox;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox mbparityModeComboBox;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox MbSlaveAdress;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox nbrValuesForCalTextBox;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox nbrValuesTextBox;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox maxFrequencyTextBox;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox weightPulseTextBox;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox maxFreq2TextBox;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox weightPulse2;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Timer timerConnect;
         private System.Windows.Forms.Timer timerUpdate;
         private System.Windows.Forms.Label labelTypeOfWork;
+        private System.Windows.Forms.Panel panelAnnimate;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

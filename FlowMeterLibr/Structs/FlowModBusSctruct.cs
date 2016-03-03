@@ -1,18 +1,47 @@
-﻿using FlowMeterLibr.Сommunication;
+﻿using System;
+using System.Runtime.InteropServices;
+using FlowMeterLibr.Сommunication;
 
 namespace FlowMeterLibr.Structs
 {
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Size = 5), Serializable]
     public struct BusStruct
     {
-        public byte MbMode { get; set; }
+        private byte _MbMode;
 
-        public byte MbParityMode { get; set; }
+        private byte _MbParityMode;
 
-        public byte MbBaudRate { get; set; }
+        private byte _MbBaudRate;
 
-        public byte MbSlaveAdress { get; set; }
+        public byte MbSlaveAdress;
 
-        public byte MbUcPort { get; set; }
+        public byte MbUcPort;
+
+        public byte MbMode
+        {
+            get
+            {
+                return _MbMode.ReadLastNBits(2); 
+                
+            }
+            set { _MbMode = value; }
+        }
+
+        public byte MbParityMode
+        {
+            get
+            {
+                return _MbParityMode.ReadLastNBits(2); 
+                
+            }
+            set { _MbParityMode = value; }
+        }
+
+        public byte MbBaudRate
+        {
+            get { return _MbBaudRate.ReadLastNBits(3); }
+            set { _MbBaudRate = value; }
+        }
     }
 
     public class FlowModBusSctruct

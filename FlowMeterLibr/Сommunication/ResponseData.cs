@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
+using FlowMeterLibr.Exceptions;
 using FlowMeterLibr.Structs;
 using FlowMeterLibr.TO;
 
@@ -8,18 +10,13 @@ namespace FlowMeterLibr.Сommunication
 {
     public static class ResponseData
     {
-        private const int MinimumLengthData = 4;
+        private const int MinimumLengthData = 3;
 
         private static FlowTypeWork DetectTypeWork(this byte[] data)
         {
             byte statusByte = data[1];
             var bit6 = statusByte.GetBit(6);
             var bit7 = statusByte.GetBit(7);
-            var bits = bit6.ToString() + bit7.ToString();
-
-            var bitString = statusByte.GetBitString();
-          //  var bitString = data[2].GetBitString();
-
             if ((bit7 == 0) && (bit6 == 0))
                 return FlowTypeWork.ServiceWork;
             if ((bit7 == 0) && (bit6 == 1))
@@ -29,24 +26,14 @@ namespace FlowMeterLibr.Сommunication
             return default(FlowTypeWork);
         }
 
-        
-        private static string ToString(this char[] arrayData)
-        {
-            StringBuilder str = new StringBuilder();
-            for (int i = 0; i < arrayData.Length; i++)
-            {
-                str.Append(arrayData[i]);
-            }
-            return str.ToString();
-        }
+       
 
         public static FlowMeterState ParseState(byte[] data)
         {
-            var typeWork = data.DetectTypeWork();
-            //TODO: typeWork add;
-            string hex = BitConverter.ToString(data);
-            Console.WriteLine(hex);
-            if (data.Length <= MinimumLengthData)
+            var typeWork = data.DetectTypeWork(); //определяем в каком режиме работает устройство.
+            if (data.isZeroOrEmpry() || (data.Length <= MinimumLengthData))
+                //длина меньше min - значит ответ пустой(или возможно помеха). 
+                //(isZeroOrEmpry == true) - одни нули или пустой массив. (описание функции в FlowExtensions.cs)
                 return new FlowMeterState();
             switch (data[0])
             {
@@ -59,7 +46,7 @@ namespace FlowMeterLibr.Сommunication
                     return new FlowMeterState();
 
                 case (byte) FlowCommands.DiveceError2Usb:
-                    Debug.WriteLine("Respone DiveceError2Usb");
+                    Debug.WriteLine("[ERROR!!!!]Respone DiveceError2Usb");
                     return new FlowMeterState();
 
                 case (byte) FlowCommands.MainCfg:
@@ -78,14 +65,19 @@ namespace FlowMeterLibr.Сommunication
 
                 case (byte) FlowCommands.PulseCfg:
                     Debug.WriteLine("Respone PulseCfg");
-                    return new FlowMeterState();
+                    var pulseStruct = new FlowPulseStruct(data);
+                    Console.WriteLine(data.GetBitString().BinaryStringToHexString());
+                    return new FlowMeterState(pulseStruct, FlowCommands.PulseCfg, typeWork);
 
                 case (byte) FlowCommands.ModBusCfg:
                     Debug.WriteLine("Respone ModBusCfg");
-                    return new FlowMeterState();
+                   // Console.WriteLine(data.GetBitString().BinaryStringToHexString());
+                    var modBusStruct = new FlowModBusSctruct(data);
+                    return new FlowMeterState(modBusStruct, FlowCommands.ModBusCfg, typeWork);
 
                 case (byte) FlowCommands.DeviceInfo:
                     Debug.WriteLine("Respone DeviceInfo");
+                 
                     var deviceInfo = new FlowCommonDevInfo(data);
                     return new FlowMeterState(deviceInfo, FlowCommands.DeviceInfo,typeWork);
 
@@ -99,6 +91,7 @@ namespace FlowMeterLibr.Сommunication
 
                 default:
                     Debug.WriteLine("[Get] not found command : " + data[0]);
+                    GenerateFlowException.Generate(data);
                     return new FlowMeterState();
             }
         }

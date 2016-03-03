@@ -48,6 +48,8 @@ namespace FlowMeterLibr
         public event EventHandler<FlowMeterEventArgs> ConfigGet;
         public event EventHandler<FlowMeterEventArgs> CommonInfoGet;
         public event EventHandler<FlowMeterWorkStatusEventsArgs> TypeWork;
+        public event EventHandler<FlowMeterEventArgs> PulseCfg;
+        public event EventHandler<FlowMeterEventArgs> ModBus;
 
         /// <summary>
         ///     Attempts to connect to a PowerMate device.
@@ -97,8 +99,14 @@ namespace FlowMeterLibr
                         }
                         Debug.WriteLine("");
                     }
-
+                    
                     Debug.WriteLine("Invalid PowerMate state");
+                    Debug.Write("PowerMate raw data: ");
+                    foreach (var t in report.Data)
+                    {
+                        Debug.Write($"{t:000} ");
+                    }
+                    Debug.WriteLine("");
                 }
                 else
                 {
@@ -151,10 +159,10 @@ namespace FlowMeterLibr
                     OnTimeChange(state);
                     break;
                 case FlowCommands.PulseCfg:
-                    //Debug.WriteLine("PulseCfg event");
+                    OnPulseInfo(state);
                     break;
                 case FlowCommands.ModBusCfg:
-                   // Debug.WriteLine("ModBusCfg event");
+                    OnModBus(state);
                     break;
                 case FlowCommands.DeviceInfo:
                     //Debug.WriteLine("DeviceInfo event");
@@ -171,6 +179,7 @@ namespace FlowMeterLibr
             }
         }
 
+
         private void OnChangedTypeForm(FlowTypeWork state)
         {
             var handle = TypeWork;
@@ -180,6 +189,18 @@ namespace FlowMeterLibr
         private void OnGetCommonInfo(FlowMeterState state)
         {
             var handle = CommonInfoGet;
+            handle?.Invoke(this, new FlowMeterEventArgs(state));
+        }
+
+        private void OnModBus(FlowMeterState state)
+        {
+            var handle = ModBus;
+            handle?.Invoke(this, new FlowMeterEventArgs(state));
+        }
+
+        private void OnPulseInfo(FlowMeterState state)
+        {
+            var handle = PulseCfg;
             handle?.Invoke(this, new FlowMeterEventArgs(state));
         }
 
@@ -194,6 +215,8 @@ namespace FlowMeterLibr
             var handle = TimeChange;
             handle?.Invoke(this, new FlowMeterEventArgs(state));
         }
+
+
 
         public void SendDateRequest()
         {
